@@ -1,5 +1,6 @@
 # 1. Neptune's Dilemma
-In this assignment you will create a program that calculates your final grade based on the assignment and exam grades you receive in the CMPS 280 course. You will create one class named `GradeSimulator` according to the following instructions:
+Tarter sauce!  Everyone's favorite undersea monarch is losing his cockle shells!  He needs a reliable way to generate his beloved Tritonacci Sequence.  In this assignment you will create a program that generates whatever item in the sequence that he desires.  Your solution should involve the use of recursion.  You should provide a helper method with the following signature:
+your final grade based on the assignment and exam grades you receive in the CMPS 280 course. You will create one class named `GradeSimulator` according to the following instructions:
 
 1. One default constructor.
 2. One `public void` method named `addQuizOrAssignment(double myGrade, double maxGrade)` that expects two `double` arguments. The first representing the grade you receive in the assignment and the other representing maximum grade possible for that assignment.
