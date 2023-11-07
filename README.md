@@ -1,4 +1,4 @@
-# 1. Grade Simulator
+# 1. Neptune's Dilemma
 In this assignment you will create a program that calculates your final grade based on the assignment and exam grades you receive in the CMPS 280 course. You will create one class named `GradeSimulator` according to the following instructions:
 
 1. One default constructor.
