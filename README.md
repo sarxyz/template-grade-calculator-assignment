@@ -1,23 +1,16 @@
 # 1. Neptune's Dilemma
-Tarter sauce!  Everyone's favorite undersea monarch is losing his cockle shells!  He needs a reliable way to generate his beloved Tritonacci Sequence.  In this assignment you will create a program that generates whatever item in the sequence that he desires.  Your solution should involve the use of recursion.  You should provide a helper method with the following signature:
-your final grade based on the assignment and exam grades you receive in the CMPS 280 course. You will create one class named `GradeSimulator` according to the following instructions:
+Tarter sauce!  Everyone's favorite undersea monarch is losing his cockle shells!  He needs a reliable way to generate his beloved Tritonacci Sequence.  He has enlisted his podna Sponge Bob to help.  Well Sponge showed up at the Envoc lab looking for you.  Now the future of the entire underwater world is in your hands.  In this assignment you will create a program that generates whatever item in the sequence that he desires.  Your solution should involve the use of recursion.  
+Your program should include a recursive method called triton.  There should be a separate main method that calls triton.  You will create one class named `Tritonacci` according to the following instructions:
 
-1. One default constructor.
-2. One `public void` method named `addQuizOrAssignment(double myGrade, double maxGrade)` that expects two `double` arguments. The first representing the grade you receive in the assignment and the other representing maximum grade possible for that assignment.
-3. One `public void` method named `addExam(double myGrade, double maxGrade)` that expects two `double` arguments. The first representing the grade you receive in the exam and the other representing the maximum grade possible for that exam.
-4. One `public double` method named `getFinalGrade()` that returns a `double` value that represents the current final grade in the course.
-5. Negative input values should be ignored in the methods implementations and not change the final grade.
+1. One `public long` method named `triton(long index)` that expects one `long` argument. This represents the index which you want the Tritonacci number for.  
 
 Note: there is no requirement regarding the attributes/datafields of your class. You are free to implement it as you wish. However, the methods *must* be implemented as described above.
 
 Boilerplate code:
 
 ```java
-public class GradeSimulator {
+public class Tritonacci {
     /* Attributes/Data fields/Properties */
-    // YOUR CODE HERE
-
-    /* Constructor(s) */
     // YOUR CODE HERE
 
     /* Method(s) */
@@ -25,53 +18,35 @@ public class GradeSimulator {
 }
 ```
 
-After implementing the `GradeSimulator` class, you can create a tester program to test that your code does what it's supposed to do. It is not part of the grade, and you can be creative and test various different scenarios in your tester program.
+After implementing the `Tritonacci` class, you can create a tester program to test that your code does what it's supposed to do. It is not part of the grade, and you can be creative and test various different scenarios in your tester program.
 
 Example tester program:
 
 ```java
 public class Main {
     public static void main(String[] args) {
-        GradeSimulator grader = new GradeSimulator();
-
-        grader.addQuizOrAssignment(1, 1); // Attendance quizzes
-        grader.addQuizOrAssignment(1, 1);
-        grader.addQuizOrAssignment(1, 1);
-        grader.addQuizOrAssignment(1, 1);
-        grader.addQuizOrAssignment(1, 1);
-
-        grader.addQuizOrAssignment(5, 5); // Hello assignment
-        grader.addQuizOrAssignment(5, 5); // Average assignment
-        grader.addQuizOrAssignment(5, 5); // Methods assignment
-
-        grader.addExam(40, 40); // I nailed the first exam
-        grader.addExam(30, 40); // I did well in the second exam
-        grader.addExam(0, 40); // I bombed in the third exam
         
-        System.out.println("My grade before the final: " + grader.getFinalGrade());
+        long index = 5;
+        long result = triton(index); //
+        System.out.println("\nResult of index " + index + " is "
+            + result);
 
-        grader.addExam(40, 40); // I nailed the final exam
-
-        System.out.println("My grade after the final: " + grader.getFinalGrade());
+        index = 10;
+        long result = triton(index); //
+        System.out.println("\nResult of index " + index + " is "
+               + result);
+      
     }
 }
 ```
 
 Hints:
-1. This is the formula to calculate the final grade ($FG$):
+1. Use the Fibonnaci sequence example discussed in class and presented in your text for reference.
 
-    $FG=50\times QA + 50 \times E$
+2. The first seven items in the Tritonacci Sequence are:
+   1 2 3 6 11 20 37 
 
-    Where:
-
-    $QA=\frac{sumQuizOrAssignmentReceived}{sumQuizOrAssignmentMax}$
-
-    $E=\frac{sumExamReceivedMinusLowest}{sumExamMaxExceptOne}$
-
-   1. If no quiz/assignment is added, then the $QA$ component should be $1$.
-   2. If no exam is added, then the $E$ component should be $1$.
-
-2. Use this to compare with your own grade on Moodle!
+3. Use your skills of analysis to determine how to generate the next items in the sequence (or check your notes from class)
 
 ## Assignment workflow
 
