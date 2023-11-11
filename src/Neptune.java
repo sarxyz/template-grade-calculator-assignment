@@ -1,4 +1,4 @@
-public class GradeSimulator {
+public class Neptune {
     /* Attributes/Data fields/Properties */
     // YOUR CODE HERE
 
